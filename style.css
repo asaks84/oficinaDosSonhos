@@ -38,101 +38,6 @@ div.center {
   height: auto;
 }
 
-#wrapper {
-  min-height: 100%;
-  flex-direction: column;
-  align-items: center;
-  min-width: 100%;
-}
-
-header {
-  justify-content: flex-end;
-}
-header .logo {
-  margin-right: auto;
-  align-items: center;
-}
-header .logo img {
-  max-width: 100%;
-  height: auto;
-}
-header .social-icons {
-  align-items: center;
-}
-header .social-icons img {
-  max-width: 100%;
-  height: auto;
-}
-
-footer {
-  min-height: 100%;
-  flex-direction: column;
-  align-items: center;
-  min-width: 100%;
-  background-color: #ffffff;
-}
-
-#hero {
-  width: 100%;
-  height: min(475px, 49.479vw);
-  background: url("./images/imagemhunter.jpg") top left no-repeat;
-  background-size: cover;
-  position: relative;
-}
-#hero > a {
-  position: absolute;
-  top: calc(50% - 24px);
-  left: 20%;
-}
-
-main > .line-items {
-  margin: 1rem 0;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-  gap: 5px;
-  row-gap: 15px;
-}
-main > .line-items span {
-  display: inline-block;
-  width: 1px;
-}
-main > .line-items span:not(:last-child) {
-  border-right: 1px solid gray;
-}
-main .line {
-  margin: auto 80px;
-  gap: 60px;
-}
-main .line .txt {
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-}
-main .line .txt p {
-  line-height: 1.3rem;
-  letter-spacing: 0.05rem;
-}
-main .line .txt p:not(:last-child) {
-  margin-bottom: 20px;
-}
-main .line .link-orcamento {
-  margin-top: 30px;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 40px;
-}
-main .line .link-orcamento div {
-  text-align: center;
-}
-main .banner {
-  margin: 30px 0 50px 0;
-}
-main > .banner > img {
-  max-width: 100%;
-  height: auto;
-}
-
 .btn {
   box-shadow: 0px 10px 14px -7px #70470a;
   background: linear-gradient(to bottom, #ff6600 5%, #ff6600 100%);
@@ -156,6 +61,169 @@ main > .banner > img {
 .btn:active {
   position: relative;
   top: 1px;
+}
+
+#wrapper {
+  min-height: 100%;
+  flex-direction: column;
+  align-items: center;
+  min-width: 100%;
+}
+#wrapper .headerline {
+  background-color: #83cdda;
+  height: 15px;
+  width: 100%;
+}
+
+header {
+  justify-content: flex-end;
+  margin: 10px auto;
+}
+@media (max-width: 599px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+}
+header .logo {
+  margin-right: auto;
+  align-items: center;
+}
+@media (max-width: 599px) {
+  header .logo {
+    margin-right: 0;
+  }
+}
+header .logo img {
+  width: 200px;
+  height: auto;
+}
+@media (max-width: 599px) {
+  header .logo img {
+    width: 300px;
+  }
+}
+header > div:nth-child(2) {
+  align-items: center;
+}
+header .social-icons {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+header .social-icons a {
+  width: 15%;
+}
+header .social-icons img {
+  max-width: 100%;
+  height: auto;
+}
+header .brands {
+  align-content: center;
+}
+header .brands img {
+  max-width: min(80px, 4rem);
+  height: auto;
+}
+
+footer {
+  min-height: 100%;
+  flex-direction: column;
+  align-items: center;
+  min-width: 100%;
+  background-color: #ffffff;
+}
+
+#hero {
+  width: 100%;
+  height: min(475px, 49.479vw);
+  background: url("./images/imagemhunter.jpg") top left no-repeat;
+  background-size: cover;
+  position: relative;
+}
+#hero > a {
+  position: absolute;
+  top: calc(50% - 24px);
+  left: 20%;
+}
+@media (max-width: 599px) {
+  #hero > a {
+    left: calc(50% - 150px);
+  }
+}
+#hero > a:active {
+  top: calc(50% - 24px + 1px);
+}
+
+main > .line-items {
+  margin: 1rem 0;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 5px;
+  row-gap: 15px;
+}
+@media (max-width: 900px) {
+  main > .line-items {
+    margin: 1rem 40px;
+  }
+}
+@media (max-width: 599px) {
+  main > .line-items {
+    margin: 1.5rem 0.1rem;
+  }
+}
+main > .line-items span {
+  display: inline-block;
+  width: 1px;
+}
+main > .line-items span:not(:last-child) {
+  border-right: 1px solid gray;
+}
+main .line {
+  margin: auto 80px;
+  gap: 60px;
+}
+@media (max-width: 900px) {
+  main .line {
+    margin: 10px 20px;
+  }
+}
+@media (max-width: 599px) {
+  main .line {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0;
+  }
+}
+main .line .txt {
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+main .line .txt p {
+  line-height: 1.3rem;
+  letter-spacing: 0.05rem;
+}
+main .line .txt p:not(:last-child) {
+  margin-bottom: 20px;
+}
+main .line .link-orcamento {
+  margin-top: 40px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+main .line .link-orcamento div {
+  text-align: center;
+}
+main .banner {
+  margin: 30px 0 50px 0;
+}
+main > .banner > img {
+  max-width: 100%;
+  height: auto;
 }
 
 /*# sourceMappingURL=style.css.map */
