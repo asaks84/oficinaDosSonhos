@@ -42,6 +42,11 @@ body{
 .grid {
     display: grid;
 }
+div.center{
+    width: 100%;
+    max-width: 960px;
+    height: auto;
+}
 
 
 #wrapper {
@@ -49,12 +54,6 @@ body{
     flex-direction: column;
     align-items: center;
     min-width: 100%;
-
-    &>div{
-        width: 100%;
-        max-width: 960px;
-        height: auto;
-    }
 }
 
 header{
@@ -79,7 +78,11 @@ header{
 }
 
 footer{
-    background: #ffffff;
+    min-height: 100%;
+    flex-direction: column;
+    align-items: center;
+    min-width: 100%;
+    background-color: #ffffff;
 }
 
 #hero{
