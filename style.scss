@@ -138,6 +138,7 @@ main{
         }
 
         & .link-orcamento{
+            margin-top: 50px;
             flex-direction: column;
             justify-content: center;
             align-items: center;
@@ -150,7 +151,7 @@ main{
         
     }
     & .banner {
-        margin: 50px 0;
+        margin: 30px 0 50px 0;
     }
 
     &>.banner>img{

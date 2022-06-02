@@ -116,6 +116,7 @@ main .line .txt p:not(:last-child) {
   margin-bottom: 20px;
 }
 main .line .link-orcamento {
+  margin-top: 50px;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -125,7 +126,7 @@ main .line .link-orcamento div {
   text-align: center;
 }
 main .banner {
-  margin: 50px 0;
+  margin: 30px 0 50px 0;
 }
 main > .banner > img {
   max-width: 100%;
