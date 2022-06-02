@@ -1,15 +1,23 @@
 @import url("./reset.css");
+:root {
+  --font-size: 15px;
+}
+
 html,
 body {
   margin: 0;
   padding: 0;
   font-size: var(--font-size);
   font-family: var(--font-family);
-  height: 100%;
   min-height: 100%;
   background-color: var(--background-color);
   line-height: 1.3;
   letter-spacing: -0.04rem;
+  font-family: Arial;
+}
+
+body {
+  background: linear-gradient(0deg, rgb(131, 205, 218) 0%, rgb(255, 255, 255) 75%, rgb(255, 255, 255) 100%);
 }
 
 * {
@@ -26,6 +34,122 @@ body {
 
 #wrapper {
   min-height: 100%;
+  flex-direction: column;
+  align-items: center;
+  min-width: 100%;
+}
+#wrapper > div {
+  width: 100%;
+  max-width: 960px;
+  height: auto;
+}
+
+header {
+  justify-content: flex-end;
+}
+header .logo {
+  margin-right: auto;
+  align-items: center;
+}
+header .logo img {
+  max-width: 100%;
+  height: auto;
+}
+header .social-icons {
+  align-items: center;
+}
+header .social-icons img {
+  max-width: 100%;
+  height: auto;
+}
+
+footer {
+  background: #ffffff;
+}
+
+#hero {
+  width: 100%;
+  height: min(475px, 49.479vw);
+  background: url("./images/imagemhunter.jpg") top left no-repeat;
+  background-size: cover;
+  position: relative;
+}
+#hero > a {
+  position: absolute;
+  top: calc(50% - 24px);
+  left: 20%;
+}
+
+main > .line-items {
+  margin: 1rem 0;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 5px;
+  row-gap: 15px;
+}
+main > .line-items span {
+  display: inline-block;
+  width: 1px;
+}
+main > .line-items span:not(:last-child) {
+  border-right: 1px solid gray;
+}
+main .line {
+  margin: auto 80px;
+  gap: 60px;
+}
+main .line .txt {
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+main .line .txt p {
+  line-height: 1.3rem;
+  letter-spacing: 0.05rem;
+}
+main .line .txt p:not(:last-child) {
+  margin-bottom: 20px;
+}
+main .line .link-orcamento {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+main .line .link-orcamento div {
+  text-align: center;
+}
+main .banner {
+  margin: 50px 0;
+}
+main > .banner > img {
+  max-width: 100%;
+  height: auto;
+}
+
+.btn {
+  box-shadow: 0px 10px 14px -7px #70470a;
+  background: linear-gradient(to bottom, #ff6600 5%, #ff6600 100%);
+  background-color: #ff6600;
+  border-radius: 8px;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 13px 26px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #803b0d;
+}
+
+.btn:hover {
+  background: linear-gradient(to bottom, #ff6600 5%, #ff6600 100%);
+  background-color: #ff6600;
+}
+
+.btn:active {
+  position: relative;
+  top: 1px;
 }
 
 /*# sourceMappingURL=style.css.map */
