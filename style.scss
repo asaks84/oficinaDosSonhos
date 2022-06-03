@@ -50,6 +50,10 @@ div.center{
     //height: auto;
 }
 
+span.strong{
+    font-weight: bold;
+}
+
 .btn {
 	box-shadow: 0px 10px 14px -7px #70470a;
 	background:linear-gradient(to bottom, #ff6600 5%, #ff6600 100%);
@@ -123,6 +127,7 @@ header{
         
         & a{
            width: 15%;
+           line-height: 0;
         }
          
         & img{
@@ -150,7 +155,48 @@ footer{
     width: 100%;
     background-color: #ffffff;
     max-height:fit-content;
-    line-height: 0;
+    line-height: 1rem;
+
+    &>div{
+        margin: 10px 0;
+        justify-content: space-between;
+        
+        @include responsive(phone){
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            
+        }
+
+        &>div{
+            width: 300px;
+            justify-content: space-between;
+            flex-direction: column;
+
+            &.txt{
+                @include responsive(phone){
+                    text-align: center;
+                }
+            }
+            
+            & p{
+                line-height: 1.5rem;
+            }
+            & p:not(:last-child){
+                margin-bottom: 30px;
+            }
+            
+            &:first-child{
+                @include responsive(phone){
+                    text-align: center;
+                }
+                &>img{
+                    max-width: 180px;
+                    height: auto;
+                }
+            }
+        }
+    }
 }
 
 #hero{
@@ -266,6 +312,11 @@ main {
 
     & .banner {
         margin: 30px 0 50px 0;
+        line-height: 0;
+
+        @include responsive(phone){
+            margin-bottom: 0;
+        }
     }
 
     &>.banner>img {
